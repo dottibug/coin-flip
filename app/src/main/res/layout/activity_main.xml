@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/munsell"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchSimulate"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="30dp"
+        android:height="48dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/switchText"
+        android:textColor="@color/onyx"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:switchPadding="12dp"
+        app:trackTint="@color/onyx" />
+
+    <ImageView
+        android:id="@+id/imageViewCoin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/coinContentDescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.18"
+        app:srcCompat="@drawable/ic_flip" />
+
+    <Button
+        android:id="@+id/buttonFlip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/platinum"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/buttonFlipLabel"
+        android:textAllCaps="true"
+        android:textColor="@color/onyx"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonReset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCoin"
+        app:layout_constraintVertical_bias="0.060000002" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/platinum"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/buttonResetLabel"
+        android:textAllCaps="true"
+        android:textColor="@color/onyx"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/buttonFlip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/buttonFlip"
+        app:layout_constraintTop_toTopOf="@+id/buttonFlip" />
+
+    <TextView
+        android:id="@+id/textViewTotalFlips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/placeholderTotalFlips"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalHeads"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFlip"
+        app:layout_constraintVertical_bias="0.38"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewTotalHeads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/placeholderTotalHeads"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTotalTails"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalFlips"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalFlips" />
+
+    <TextView
+        android:id="@+id/textViewTotalTails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/placeholderTotalTails"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarHeadsPercent"
+        app:layout_constraintStart_toStartOf="@+id/textViewTotalHeads"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalHeads" />
+
+    <TextView
+        android:id="@+id/textViewHeadsPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingStart="32dp"
+        android:text="@string/placeholderHeadsPercent"
+        android:textColor="@color/platinum"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarHeadsPercent"
+        app:layout_constraintStart_toStartOf="@+id/progressBarHeadsPercent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTotalTails"
+        app:layout_constraintVertical_bias="0.16000003"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/textViewTailsPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:paddingStart="32dp"
+        android:text="@string/placeholderTailsPercent"
+        android:textColor="@color/platinum"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarTailsPercent"
+        app:layout_constraintStart_toStartOf="@+id/progressBarTailsPercent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarHeadsPercent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarHeadsPercent"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:progressTint="@color/sandy"
+        app:layout_constraintBottom_toTopOf="@+id/textViewTailsPercent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewHeadsPercent" />
+
+    <ProgressBar
+        android:id="@+id/progressBarTailsPercent"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:progressTint="@color/sandy"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTailsPercent" />
+
+    <EditText
+        android:id="@+id/editTextSimNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:fontFamily="@font/roboto_bold"
+        android:hint="@string/hintSimNumber"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textColor="@color/onyx"
+        android:textColorHint="@color/onyx"
+        android:textSize="18sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonSubmitSimNumber"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressBarTailsPercent"
+        app:layout_constraintVertical_bias="0.36" />
+
+    <Button
+        android:id="@+id/buttonSubmitSimNumber"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="@color/onyx"
+        android:fontFamily="@font/roboto_bold"
+        android:text="@string/buttonSimLabel"
+        android:textAllCaps="true"
+        android:textColor="@color/platinum"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/editTextSimNumber"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/editTextSimNumber" />
+</androidx.constraintlayout.widget.ConstraintLayout>

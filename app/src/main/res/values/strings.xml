@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Coin Flip</string>
+    <string name="switchText">Simulation Mode</string>
+    <string name="coinContentDescription">Icon to represent the state of a coin flip</string>
+    <string name="buttonFlipLabel">Flip</string>
+    <string name="buttonResetLabel">Reset</string>
+    <string name="placeholderTotalFlips">Total Flips: 0</string>
+    <string name="placeholderTotalHeads">Total Heads: 0</string>
+    <string name="placeholderTotalTails">Total Tails: 0</string>
+    <string name="totalFlips">Total Flips: %d</string>
+    <string name="totalHeads">Total Heads: %d</string>
+    <string name="totalTails">Total Tails: %d</string>
+    <string name="placeholderHeadsPercent">Heads: 0%</string>
+    <string name="placeholderTailsPercent">Tails: 0%</string>
+    <string name="headsPercent">Heads: %1$s%%</string>
+    <string name="tailsPercent">Tails: %1$s%%</string>
+    <string name="hintSimNumber">Flips</string>
+    <string name="buttonSimLabel">Simulate</string>
+</resources>
